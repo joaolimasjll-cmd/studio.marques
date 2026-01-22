@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Marques - Nail & Brows</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background-color: #f2f4f5; scroll-behavior: smooth; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .text-rose-dark { color: #8d5d5d; }
+    
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    .btn-whatsapp-pulse { animation: pulse-green 2s infinite; }
+
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 12px;
+      background-color: #fff;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.1); }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <nav class="flex justify-between items-center p-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div class="text-xl font-serif font-bold text-rose-dark italic">Studio Marques</div>
+    <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold text-black">
+      <a href="#inicio" class="hover:text-rose-400 transition">Início</a>
+      <a href="#servicos" class="hover:text-rose-400 transition">Serviços</a>
+      <a href="#modelos" class="hover:text-rose-400 transition text-rose-dark font-black">Seja Modelo</a>
+      <a href="#galeria" class="hover:text-rose-400 transition">Portfólio</a>
+    </div>
+  </nav>
+
+  <section id="inicio" class="relative bg-[#f2f4f5] flex items-center justify-center overflow-hidden min-h-[65vh] lg:min-h-[85vh]">
+    <img src="https://i.ibb.co/ymksYT21/layout.jpg" class="w-full h-auto max-h-screen object-contain" alt="Banner">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4 transform translate-y-24 md:translate-y-32">
+      <h1 class="text-4xl md:text-6xl font-serif italic mb-2">Realce sua essência.</h1>
+      <p class="text-sm md:text-lg font-light mb-8 tracking-widest uppercase">Nail Design & Estética do Olhar</p>
+      <a href="https://wa.me/5545998219680?text=Olá! Gostaria de agendar um horário no Studio Marques." target="_blank" class="bg-[#25D366] text-white px-10 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition btn-whatsapp-pulse text-[10px] tracking-widest uppercase">
+        Agendar Agora
+      </a>
+    </div>
+  </section>
+
+  <section id="servicos" class="py-20 px-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-serif text-center text-rose-dark mb-12 italic">Nossos Serviços</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-200">
+        <h3 class="font-bold text-rose-dark mb-6 uppercase text-xs tracking-widest">💅 Unhas</h3>
+        
+        <div class="mb-5 border-b pb-3">
+          <p class="text-sm font-semibold text-gray-700 mb-1">Esmaltação Tradicional <small class="text-gray-400 font-normal">(Sem cutícula)</small></p>
+          <div class="flex justify-between text-xs text-gray-500">
+            <span>Pé: R$ 35 | Mão: R$ 25</span>
+            <span class="font-bold text-rose-dark uppercase">Pé e Mão: R$ 50</span>
+          </div>
+        </div>
+
+        <div class="mb-5 border-b pb-3">
+          <p class="text-sm font-semibold text-gray-700 mb-1">Cutilagem <small class="text-gray-400 font-normal">(Sem esmaltação)</small></p>
+          <div class="flex justify-between text-xs text-gray-500">
+            <span>Pé: R$ 35 | Mão: R$ 25</span>
+            <span class="font-bold text-rose-dark uppercase">Pé e Mão: R$ 50</span>
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <p class="text-sm font-semibold text-gray-700 mb-1">Cutilagem + Esmaltação</p>
+          <div class="flex justify-between text-xs text-gray-500">
+            <span>Pé: R$ 45 | Mão: R$ 35</span>
+            <span class="font-bold text-rose-dark uppercase">Pé e Mão: R$ 70</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-200">
+        <h3 class="font-bold text-rose-dark mb-6 uppercase text-xs tracking-widest">👁️ Estética do Olhar</h3>
+        
+        <p class="text-sm text-gray-600 border-b py-3 flex justify-between">
+          <span>Design Estratégico</span> 
+          <span class="font-bold text-rose-dark">R$ 25,00</span>
+        </p>
+        <p class="text-sm text-gray-600 border-b py-3 flex justify-between">
+          <span>Design com Henna</span> 
+          <span class="font-bold text-rose-dark">R$ 40,00</span>
+        </p>
+        <p class="text-sm text-gray-600 border-b py-3 flex justify-between items-center">
+          <span>Extensão de Cílios <br><small class="text-[10px] text-gray-400 uppercase">(Vol. Brasileiro ou Híbrido)</small></span> 
+          <span class="font-bold text-rose-dark">R$ 99,00</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modelos" class="py-16 px-6 bg-[#8d5d5d] text-white text-center">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-serif italic mb-6">Seja nossa Modelo</h2>
+        <p class="text-base font-light leading-relaxed mb-8 opacity-90">
+            Deseja realizar um procedimento com investimento reduzido? Estamos selecionando modelos para portfólio e aplicação de novas técnicas. Cobramos apenas uma <strong>taxa de material</strong>.
+        </p>
+        <a href="https://wa.me/5545998219680?text=Olá! Tenho interesse em ser modelo para o Studio Marques." target="_blank" class="inline-block border-2 border-white px-10 py-3 rounded-full font-bold text-[10px] tracking-widest hover:bg-white hover:text-rose-dark transition uppercase">
+            Quero me candidatar
+        </a>
+    </div>
+  </section>
+
+  <section id="galeria" class="py-20 bg-white px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-serif text-center text-rose-dark mb-16 italic">Meu Portfólio</h2>
+      <div class="mb-16">
+        <h3 class="text-rose-dark font-bold mb-8 border-l-4 border-gray-100 pl-4 uppercase tracking-[0.2em] text-[10px] italic">Sobrancelhas</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="gallery-item"><img src="https://i.ibb.co/vCQC8nfB/image.jpg"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/TqWB6vsq/image.jpg"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/93zhbL5Z/image.jpg"></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-rose-dark font-bold mb-8 border-l-4 border-gray-100 pl-4 uppercase tracking-[0.2em] text-[10px] italic">Extensão de Cílios</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="gallery-item"><img src="https://i.ibb.co/j0GBp21/image.jpg"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/HLqMKkW3/image.jpg"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/DJ5J4J5/image.jpg"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/RTKF8wJW/image.jpg"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/B28q4Vc7/image.jpg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-16 bg-gray-100 text-center px-6 border-t border-gray-200">
+    <div class="max-w-2xl mx-auto">
+        <p class="font-serif italic text-rose-dark text-3xl mb-4">Studio Marques</p>
+        <p class="text-gray-500 text-sm mb-10">Agende seu horário e realce sua beleza.</p>
+        <a href="https://wa.me/5545998219680?text=Olá! Gostaria de mais informações sobre os serviços." target="_blank" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition flex items-center justify-center space-x-2 w-fit mx-auto text-[10px] tracking-widest uppercase">
+            <span>Agendar pelo WhatsApp</span>
+        </a>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5545998219680?text=Olá! Gostaria de mais informações." target="_blank" class="fixed bottom-6 right-6 z-[999] bg-[#25D366] text-white p-4 rounded-full shadow-2xl btn-whatsapp-pulse hover:scale-110 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
+
+</body>
+</html>
