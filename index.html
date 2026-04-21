@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Marques - Nail & Brows</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Montserrat', sans-serif; background-color: #f2f4f5; scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #f8fafb; }
     .font-serif { font-family: 'Playfair Display', serif; }
     .text-rose-dark { color: #8d5d5d; }
+    .bg-rose-dark { background-color: #8d5d5d; }
     
     @keyframes pulse-green {
       0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
@@ -22,137 +23,189 @@
       aspect-ratio: 1 / 1;
       overflow: hidden;
       border-radius: 12px;
-      background-color: #fff;
+      background-color: #eee;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
     .gallery-item img {
       width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-item:hover img { transform: scale(1.08); }
   </style>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-800 antialiased">
 
-  <nav class="flex justify-between items-center p-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-    <div class="text-xl font-serif font-bold text-rose-dark italic">Studio Marques</div>
-    <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold text-black">
-      <a href="#inicio" class="hover:text-rose-400 transition">Início</a>
-      <a href="#servicos" class="hover:text-rose-400 transition">Serviços</a>
-      <a href="#modelos" class="hover:text-rose-400 transition text-rose-dark font-black">Seja Modelo</a>
-      <a href="#galeria" class="hover:text-rose-400 transition">Portfólio</a>
+  <nav class="flex justify-between items-center p-5 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div class="text-2xl font-serif font-bold text-rose-dark italic tracking-tighter">Studio Marques</div>
+    <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-600">
+      <a href="#inicio" class="hover:text-rose-dark transition">Início</a>
+      <a href="#servicos" class="hover:text-rose-dark transition">Serviços</a>
+      <a href="#modelos" class="text-rose-dark border-b border-rose-dark/30">Seja Modelo</a>
+      <a href="#galeria" class="hover:text-rose-dark transition">Portfólio</a>
     </div>
   </nav>
 
-  <section id="inicio" class="relative bg-[#f2f4f5] flex items-center justify-center overflow-hidden min-h-[65vh] lg:min-h-[85vh]">
-    <img src="https://i.ibb.co/ymksYT21/layout.jpg" class="w-full h-auto max-h-screen object-contain" alt="Banner">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-black px-4 transform translate-y-24 md:translate-y-32">
-      <h1 class="text-4xl md:text-6xl font-serif italic mb-2">Realce sua essência.</h1>
-      <p class="text-sm md:text-lg font-light mb-8 tracking-widest uppercase">Nail Design & Estética do Olhar</p>
-      <a href="https://wa.me/5545998219680?text=Olá! Gostaria de agendar um horário no Studio Marques." target="_blank" class="bg-[#25D366] text-white px-10 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition btn-whatsapp-pulse text-[10px] tracking-widest uppercase">
+  <section id="inicio" class="relative bg-[#f2f4f5] flex items-center justify-center overflow-hidden min-h-[70vh] lg:min-h-[90vh]">
+    <img src="https://i.ibb.co/ymksYT21/layout.jpg" class="w-full h-full object-cover absolute inset-0 opacity-80 md:opacity-100 md:object-contain" alt="Banner Studio Marques">
+    <div class="relative z-10 flex flex-col items-center justify-center text-center text-black px-4 mt-32 md:mt-48">
+      <h1 class="text-4xl md:text-7xl font-serif italic mb-4 drop-shadow-sm">Realce sua essência.</h1>
+      <p class="text-xs md:text-lg font-light mb-10 tracking-[0.3em] uppercase text-gray-700">Nail Design & Estética do Olhar</p>
+      <a href="https://wa.me/5545998219680?text=Olá! Gostaria de agendar um horário no Studio Marques." target="_blank" class="bg-[#25D366] text-white px-12 py-4 rounded-full font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all btn-whatsapp-pulse text-[10px] tracking-widest uppercase">
         Agendar Agora
       </a>
     </div>
   </section>
 
-  <section id="servicos" class="py-20 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-serif text-center text-rose-dark mb-12 italic">Nossos Serviços</h2>
-    <div class="grid md:grid-cols-2 gap-8">
+  <section id="servicos" class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+        <span class="text-rose-dark uppercase tracking-widest text-[10px] font-bold">Experiência Única</span>
+        <h2 class="text-4xl font-serif text-rose-dark italic mt-2">Nossos Serviços</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-200">
-        <h3 class="font-bold text-rose-dark mb-6 uppercase text-xs tracking-widest">💅 Unhas</h3>
-        
-        <div class="mb-5 border-b pb-3">
-          <p class="text-sm font-semibold text-gray-700 mb-1">Esmaltação Tradicional <small class="text-gray-400 font-normal">(Sem cutícula)</small></p>
-          <div class="flex justify-between text-xs text-gray-500">
-            <span>Pé: R$ 35 | Mão: R$ 25</span>
-            <span class="font-bold text-rose-dark uppercase">Pé e Mão: R$ 50</span>
-          </div>
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="flex items-center mb-6">
+            <span class="text-xl mr-3">💅</span>
+            <h3 class="font-bold text-rose-dark uppercase text-[10px] tracking-widest">Unhas</h3>
         </div>
-
-        <div class="mb-5 border-b pb-3">
-          <p class="text-sm font-semibold text-gray-700 mb-1">Cutilagem <small class="text-gray-400 font-normal">(Sem esmaltação)</small></p>
-          <div class="flex justify-between text-xs text-gray-500">
-            <span>Pé: R$ 35 | Mão: R$ 25</span>
-            <span class="font-bold text-rose-dark uppercase">Pé e Mão: R$ 50</span>
-          </div>
-        </div>
-
-        <div class="mb-2">
-          <p class="text-sm font-semibold text-gray-700 mb-1">Cutilagem + Esmaltação</p>
-          <div class="flex justify-between text-xs text-gray-500">
-            <span>Pé: R$ 45 | Mão: R$ 35</span>
-            <span class="font-bold text-rose-dark uppercase">Pé e Mão: R$ 70</span>
-          </div>
+        <div class="space-y-3">
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Manicure</span>
+                <span class="font-bold text-rose-dark">R$ 40</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Pedicure</span>
+                <span class="font-bold text-rose-dark">R$ 45</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50 bg-rose-50/30 px-1 font-semibold">
+                <span class="text-gray-800 italic">Mão e Pé</span>
+                <span class="text-rose-dark">R$ 85</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Esmaltação</span>
+                <span class="font-bold text-rose-dark">R$ 20</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Conserto de Unha</span>
+                <span class="font-bold text-rose-dark">R$ 15</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Esmaltação em Gel</span>
+                <span class="font-bold text-rose-dark">R$ 70</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Spa dos Pés</span>
+                <span class="font-bold text-rose-dark">R$ 70</span>
+            </div>
+            <div class="flex justify-between text-sm py-1">
+                <span class="text-gray-700">Plástica dos Pés</span>
+                <span class="font-bold text-rose-dark">R$ 90</span>
+            </div>
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-200">
-        <h3 class="font-bold text-rose-dark mb-6 uppercase text-xs tracking-widest">👁️ Estética do Olhar</h3>
-        
-        <p class="text-sm text-gray-600 border-b py-3 flex justify-between">
-          <span>Design Estratégico</span> 
-          <span class="font-bold text-rose-dark">R$ 25,00</span>
-        </p>
-        <p class="text-sm text-gray-600 border-b py-3 flex justify-between">
-          <span>Design com Henna</span> 
-          <span class="font-bold text-rose-dark">R$ 40,00</span>
-        </p>
-        <p class="text-sm text-gray-600 border-b py-3 flex justify-between items-center">
-          <span>Extensão de Cílios <br><small class="text-[10px] text-gray-400 uppercase">(Vol. Brasileiro ou Híbrido)</small></span> 
-          <span class="font-bold text-rose-dark">R$ 99,00</span>
-        </p>
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="flex items-center mb-6">
+            <span class="text-xl mr-3">👁️</span>
+            <h3 class="font-bold text-rose-dark uppercase text-[10px] tracking-widest">Estética do Olhar</h3>
+        </div>
+        <div class="space-y-4">
+            <div class="flex justify-between py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-700">Design de Sobrancelha</span>
+                <span class="font-bold text-rose-dark text-sm">R$ 40</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-700">Design com Henna</span>
+                <span class="font-bold text-rose-dark text-sm">R$ 60</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-700">Aplicação de Henna</span>
+                <span class="font-bold text-rose-dark text-sm">R$ 30</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-700">Buço</span>
+                <span class="font-bold text-rose-dark text-sm">R$ 20</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-700">Cílios (Colocação)</span>
+                <span class="font-bold text-rose-dark text-sm">R$ 160</span>
+            </div>
+            <div class="flex justify-between py-2">
+                <span class="text-sm text-gray-700">Cílios (Manutenção)</span>
+                <span class="font-bold text-rose-dark text-sm">R$ 140</span>
+            </div>
+        </div>
       </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="flex items-center mb-6">
+            <span class="text-xl mr-3">✨</span>
+            <h3 class="font-bold text-rose-dark uppercase text-[10px] tracking-widest">Depilação</h3>
+        </div>
+        <div class="space-y-3">
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Íntima</span>
+                <span class="font-bold text-rose-dark">R$ 60</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Perna Inteira</span>
+                <span class="font-bold text-rose-dark">R$ 50</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Meia Perna</span>
+                <span class="font-bold text-rose-dark">R$ 40</span>
+            </div>
+            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
+                <span class="text-gray-700">Axila</span>
+                <span class="font-bold text-rose-dark">R$ 30</span>
+            </div>
+            <div class="flex justify-between text-sm py-1">
+                <span class="text-gray-700">Facial</span>
+                <span class="font-bold text-rose-dark">R$ 70</span>
+            </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="modelos" class="py-16 px-6 bg-[#8d5d5d] text-white text-center">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-serif italic mb-6">Seja nossa Modelo</h2>
-        <p class="text-base font-light leading-relaxed mb-8 opacity-90">
-            Deseja realizar um procedimento com investimento reduzido? Estamos selecionando modelos para portfólio e aplicação de novas técnicas. Cobramos apenas uma <strong>taxa de material</strong>.
+  <section id="modelos" class="py-20 px-6 bg-rose-dark text-white text-center relative overflow-hidden">
+    <div class="max-w-3xl mx-auto relative z-10">
+        <h2 class="text-4xl font-serif italic mb-6">Seja nossa Modelo</h2>
+        <p class="text-base font-light leading-relaxed mb-10 opacity-90 italic">
+            Participe do nosso processo criativo! Selecionamos modelos para novas técnicas com taxa apenas de material.
         </p>
-        <a href="https://wa.me/5545998219680?text=Olá! Tenho interesse em ser modelo para o Studio Marques." target="_blank" class="inline-block border-2 border-white px-10 py-3 rounded-full font-bold text-[10px] tracking-widest hover:bg-white hover:text-rose-dark transition uppercase">
+        <a href="https://wa.me/5545998219680?text=Olá! Tenho interesse em ser modelo." target="_blank" class="inline-block bg-white text-rose-dark px-12 py-4 rounded-full font-bold text-[10px] tracking-[0.2em] hover:bg-gray-100 transition-all uppercase shadow-xl">
             Quero me candidatar
         </a>
     </div>
   </section>
 
-  <section id="galeria" class="py-20 bg-white px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-serif text-center text-rose-dark mb-16 italic">Meu Portfólio</h2>
-      <div class="mb-16">
-        <h3 class="text-rose-dark font-bold mb-8 border-l-4 border-gray-100 pl-4 uppercase tracking-[0.2em] text-[10px] italic">Sobrancelhas</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="gallery-item"><img src="https://i.ibb.co/vCQC8nfB/image.jpg"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/TqWB6vsq/image.jpg"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/93zhbL5Z/image.jpg"></div>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-rose-dark font-bold mb-8 border-l-4 border-gray-100 pl-4 uppercase tracking-[0.2em] text-[10px] italic">Extensão de Cílios</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="gallery-item"><img src="https://i.ibb.co/j0GBp21/image.jpg"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/HLqMKkW3/image.jpg"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/DJ5J4J5/image.jpg"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/RTKF8wJW/image.jpg"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/B28q4Vc7/image.jpg"></div>
-        </div>
+  <section id="galeria" class="py-24 bg-white px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-serif text-rose-dark mb-20 italic">Transformações</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="gallery-item"><img src="https://i.ibb.co/vCQC8nfB/image.jpg" alt="Trabalho 1"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/TqWB6vsq/image.jpg" alt="Trabalho 2"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/93zhbL5Z/image.jpg" alt="Trabalho 3"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/j0GBp21/image.jpg" alt="Trabalho 4"></div>
       </div>
     </div>
   </section>
 
-  <footer class="py-16 bg-gray-100 text-center px-6 border-t border-gray-200">
+  <footer class="py-20 bg-gray-50 text-center px-6 border-t border-gray-100">
     <div class="max-w-2xl mx-auto">
-        <p class="font-serif italic text-rose-dark text-3xl mb-4">Studio Marques</p>
-        <p class="text-gray-500 text-sm mb-10">Agende seu horário e realce sua beleza.</p>
-        <a href="https://wa.me/5545998219680?text=Olá! Gostaria de mais informações sobre os serviços." target="_blank" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition flex items-center justify-center space-x-2 w-fit mx-auto text-[10px] tracking-widest uppercase">
+        <p class="font-serif italic text-rose-dark text-4xl mb-6">Studio Marques</p>
+        <p class="text-gray-400 text-xs tracking-widest uppercase mb-12">Beleza com propósito e delicadeza.</p>
+        <a href="https://wa.me/5545998219680" target="_blank" class="bg-[#25D366] text-white px-12 py-5 rounded-full font-bold shadow-lg hover:scale-105 transition-all flex items-center justify-center space-x-3 w-fit mx-auto text-[10px] tracking-widest uppercase">
             <span>Agendar pelo WhatsApp</span>
         </a>
     </div>
   </footer>
 
-  <a href="https://wa.me/5545998219680?text=Olá! Gostaria de mais informações." target="_blank" class="fixed bottom-6 right-6 z-[999] bg-[#25D366] text-white p-4 rounded-full shadow-2xl btn-whatsapp-pulse hover:scale-110 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  <a href="https://wa.me/5545998219680" target="_blank" class="fixed bottom-8 right-8 z-[999] bg-[#25D366] text-white p-5 rounded-full shadow-2xl btn-whatsapp-pulse hover:scale-110 transition-all">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
   </a>
 
 </body>
