@@ -13,9 +13,9 @@
     .bg-rose-dark { background-color: #8d5d5d; }
     
     @keyframes pulse-green {
-      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
     .btn-whatsapp-pulse { animation: pulse-green 2s infinite; }
 
@@ -35,13 +35,14 @@
 </head>
 <body class="text-gray-800 antialiased">
 
-  <nav class="flex justify-between items-center p-5 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+  <nav class="flex justify-between items-center p-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
     <div class="text-2xl font-serif font-bold text-rose-dark italic tracking-tighter">Studio Marques</div>
     <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-600">
       <a href="#inicio" class="hover:text-rose-dark transition">Início</a>
       <a href="#servicos" class="hover:text-rose-dark transition">Serviços</a>
-      <a href="#modelos" class="text-rose-dark border-b border-rose-dark/30">Seja Modelo</a>
-      <a href="#galeria" class="hover:text-rose-dark transition">Portfólio</a>
+      <a href="#home-care" class="hover:text-rose-dark transition">Atendimento em Casa</a>
+      <a href="#modelos" class="hover:text-rose-dark transition">Seja Modelo</a>
+      <a href="#galeria" class="hover:text-rose-dark transition border-b border-rose-dark/30">Portfólio</a>
     </div>
   </nav>
 
@@ -63,10 +64,9 @@
     </div>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
         <div class="flex items-center mb-6">
-            <span class="text-xl mr-3">💅</span>
+            <span class="text-xl mr-3 group-hover:scale-110 transition-transform">💅</span>
             <h3 class="font-bold text-rose-dark uppercase text-[10px] tracking-widest">Unhas</h3>
         </div>
         <div class="space-y-3">
@@ -83,14 +83,6 @@
                 <span class="text-rose-dark">R$ 85</span>
             </div>
             <div class="flex justify-between text-sm py-1 border-b border-gray-50">
-                <span class="text-gray-700">Esmaltação</span>
-                <span class="font-bold text-rose-dark">R$ 20</span>
-            </div>
-            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
-                <span class="text-gray-700">Conserto de Unha</span>
-                <span class="font-bold text-rose-dark">R$ 15</span>
-            </div>
-            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
                 <span class="text-gray-700">Esmaltação em Gel</span>
                 <span class="font-bold text-rose-dark">R$ 70</span>
             </div>
@@ -105,9 +97,9 @@
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
         <div class="flex items-center mb-6">
-            <span class="text-xl mr-3">👁️</span>
+            <span class="text-xl mr-3 group-hover:scale-110 transition-transform">👁️</span>
             <h3 class="font-bold text-rose-dark uppercase text-[10px] tracking-widest">Estética do Olhar</h3>
         </div>
         <div class="space-y-4">
@@ -120,14 +112,6 @@
                 <span class="font-bold text-rose-dark text-sm">R$ 60</span>
             </div>
             <div class="flex justify-between py-2 border-b border-gray-50">
-                <span class="text-sm text-gray-700">Aplicação de Henna</span>
-                <span class="font-bold text-rose-dark text-sm">R$ 30</span>
-            </div>
-            <div class="flex justify-between py-2 border-b border-gray-50">
-                <span class="text-sm text-gray-700">Buço</span>
-                <span class="font-bold text-rose-dark text-sm">R$ 20</span>
-            </div>
-            <div class="flex justify-between py-2 border-b border-gray-50">
                 <span class="text-sm text-gray-700">Cílios (Colocação)</span>
                 <span class="font-bold text-rose-dark text-sm">R$ 160</span>
             </div>
@@ -138,9 +122,9 @@
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
         <div class="flex items-center mb-6">
-            <span class="text-xl mr-3">✨</span>
+            <span class="text-xl mr-3 group-hover:scale-110 transition-transform">✨</span>
             <h3 class="font-bold text-rose-dark uppercase text-[10px] tracking-widest">Depilação</h3>
         </div>
         <div class="space-y-3">
@@ -153,10 +137,6 @@
                 <span class="font-bold text-rose-dark">R$ 50</span>
             </div>
             <div class="flex justify-between text-sm py-1 border-b border-gray-50">
-                <span class="text-gray-700">Meia Perna</span>
-                <span class="font-bold text-rose-dark">R$ 40</span>
-            </div>
-            <div class="flex justify-between text-sm py-1 border-b border-gray-50">
                 <span class="text-gray-700">Axila</span>
                 <span class="font-bold text-rose-dark">R$ 30</span>
             </div>
@@ -166,7 +146,48 @@
             </div>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section id="home-care" class="py-20 bg-white px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-[#fdf9f9] rounded-[3rem] p-8 md:p-16 border border-rose-100 flex flex-col md:flex-row items-center gap-12">
+        
+        <div class="flex-1 text-center md:text-left">
+          <span class="text-rose-dark uppercase tracking-[0.3em] text-[10px] font-bold">Conforto e Exclusividade</span>
+          <h2 class="text-4xl font-serif text-rose-dark italic mt-4 mb-6">Atendimento Home Care</h2>
+          
+          <p class="text-gray-600 leading-relaxed mb-8 font-light">
+            Leve a experiência do <strong>Studio Marques</strong> para o conforto do seu lar. 
+            Ideal para quem busca praticidade e um atendimento personalizado sem precisar se deslocar.
+          </p>
+
+          <div class="inline-flex items-center space-x-3 text-rose-dark bg-white px-6 py-3 rounded-2xl shadow-sm border border-rose-50 mb-8">
+            <span class="text-xl">🚗</span>
+            <span class="text-sm font-semibold tracking-tight italic">Valores de deslocamento a combinar</span>
+          </div>
+
+          <div class="block">
+            <a href="https://wa.me/5545998219680?text=Olá! Gostaria de consultar disponibilidade para atendimento a domicílio." target="_blank" class="inline-block bg-rose-dark text-white px-10 py-4 rounded-full font-bold text-[10px] tracking-[0.2em] hover:opacity-90 transition-all uppercase shadow-lg">
+              Consultar Disponibilidade
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-1 flex justify-center">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-dashed border-rose-200 flex items-center justify-center p-4">
+              <div class="w-full h-full rounded-full bg-rose-100/30 flex items-center justify-center overflow-hidden">
+                <span class="text-7xl">🏠</span>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 bg-white shadow-xl p-4 rounded-2xl border border-gray-50 transform rotate-12">
+              <p class="text-[10px] font-bold text-rose-dark uppercase leading-tight">Atendimento<br>VIP</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -186,10 +207,10 @@
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-serif text-rose-dark mb-20 italic">Transformações</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="gallery-item"><img src="https://i.ibb.co/vCQC8nfB/image.jpg" alt="Trabalho 1"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/TqWB6vsq/image.jpg" alt="Trabalho 2"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/93zhbL5Z/image.jpg" alt="Trabalho 3"></div>
-          <div class="gallery-item"><img src="https://i.ibb.co/j0GBp21/image.jpg" alt="Trabalho 4"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/vCQC8nfB/image.jpg" alt="Design de Unhas Studio Marques"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/TqWB6vsq/image.jpg" alt="Manicure e Pedicure"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/93zhbL5Z/image.jpg" alt="Estética do Olhar"></div>
+          <div class="gallery-item"><img src="https://i.ibb.co/j0GBp21/image.jpg" alt="Portfólio Studio Marques"></div>
       </div>
     </div>
   </section>
